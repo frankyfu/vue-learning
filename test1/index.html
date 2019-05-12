@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <span class="demo1" v-if="seen">Now you see me</span>
+    <br/>
+    <ol class="demo2">
+    <li  v-for="todo in todos">
+        {{ todo.text }}
+    </li>
+    </ol>
+    <div class="demo3">
+        <p>{{ message1 }}</p>
+        <button v-on:click="reverseMessage">逆转消息</button>
+    </div>
+    <div class="demo4">
+        <p>{{ message2 }}</p>
+        <input v-model="message">
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
